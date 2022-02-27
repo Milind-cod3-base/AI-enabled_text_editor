@@ -27,3 +27,7 @@ class editorNotepad:
     __ofFileMenu = Menu(__ofMenuBar, tearoff=0)  #here tearoff is set to 0 to avoid the dotted lines at the top of the drop down menu.
     __ofEditMenu = Menu(__ofMenuBar, tearoff=0)
     __ofHelpMenu = Menu(__ofMenuBar, tearoff=0)
+
+    #A scrollbar to scroll up and down in the window
+    __ofScrollBar = Scrollbar(__ofTextArea)   #setting up a scrollbar in the entire text area
+    
