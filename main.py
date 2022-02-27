@@ -11,3 +11,10 @@ from tkinter.messagebox import *    #its to write text / message in the notepad
 
 from tkinter.filedialog import *   #used for the dialog box to appear when you are opening file from anywhere in your system / saving your file in a particular position of place
 
+#creating a class
+
+class editorNotepad:
+
+    __root = Tk()   #class's name mangling done. Can be called only by ._classname__namemangle
+
+    
