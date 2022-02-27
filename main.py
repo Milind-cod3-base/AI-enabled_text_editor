@@ -57,5 +57,11 @@ class editorNotepad:
         except KeyError:
             pass
 
-        
+        #window text must be set
+
+        self.__root.title("Untitled - Editor pad")
+
+        #Center the window
+        screenWidth = self.__root.winfo_screenwidth()
+        screenHeight = self._root.winfo_screenheight()
 
