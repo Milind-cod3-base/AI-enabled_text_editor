@@ -31,3 +31,31 @@ class editorNotepad:
     #A scrollbar to scroll up and down in the window
     __ofScrollBar = Scrollbar(__ofTextArea)   #setting up a scrollbar in the entire text area
     
+
+    def __init__(self, **kwargs):  
+        
+        #init initialises objects state (constructor) - it sets the characteristics of the class.
+        #**kwargs will let the function to accept multiple number of keyboard arguments
+
+        #icon setup
+        try:
+            self.__root.wm_iconbitmap("Editor.ico")
+
+        except: 
+            pass
+
+        #window size setup - where default is marked as 400x400
+        try:
+            self.__ofWidth = kwargs['width']
+
+        except KeyError:
+            pass
+
+        try:
+            self.__ofHeight = kwargs['height']
+
+        except KeyError:
+            pass
+
+        
+
