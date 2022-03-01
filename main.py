@@ -80,3 +80,6 @@ class editorNotepad:
 
         self.__root.grid_rowconfigure(0,weight=1)  #minisize(minimum size of the row), weight(how much does  the additional space propagate to this row)
         self.__root.grid_columnconfigure(0,weight=1)
+
+        #Adding widget controls
+        self.__ofTextArea.grid(sticky= N + E + S +W )
