@@ -75,3 +75,8 @@ class editorNotepad:
 
         #Top and bottom alignment
         self.__root.geometry('%dx%d+%d+%d' %(self.__ofWidth, self.__ofHeight, left, top))
+
+        #making text area resizable(auto)
+
+        self.__root.grid_rowconfigure(0,weight=1)  #minisize(minimum size of the row), weight(how much does  the additional space propagate to this row)
+        self.__root.grid_columnconfigure(0,weight=1)
