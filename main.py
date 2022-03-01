@@ -88,6 +88,9 @@ class editorNotepad:
         self.__ofFileMenu.add_command(label="New", command = self.__newFile)
 
         #opening existing file
-        self.__ofFileMenu.add_command(label = "Save", command= self.__openFile)
+        self.__ofFileMenu.add_command(label = "Open", command= self.__openFile)
+
+        #saving a file
+        self.__ofFileMenu.add_command(lable="Save", command = self.__saveFile)
 
         
