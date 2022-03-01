@@ -72,3 +72,6 @@ class editorNotepad:
 
         #right aligning
         top = (screenHeight /2) - (self.__ofHeight /2)
+
+        #Top and bottom alignment
+        self.__root.geometry('%dx%d+%d+%d' %(self.__ofWidth, self.__ofHeight, left, top))
