@@ -65,3 +65,10 @@ class editorNotepad:
         screenWidth = self.__root.winfo_screenwidth()
         screenHeight = self._root.winfo_screenheight()
 
+
+        #left aligning the window
+
+        left = (screenWidth / 2) - (self.__ofWidth /2)
+
+        #right aligning
+        top = (screenHeight /2) - (self.__ofHeight /2)
