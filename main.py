@@ -83,3 +83,11 @@ class editorNotepad:
 
         #Adding widget controls
         self.__ofTextArea.grid(sticky= N + E + S +W )
+
+        #opening a new file code
+        self.__ofFileMenu.add_command(label="New", command = self.__newFile)
+
+        #opening existing file
+        self.__ofFileMenu.add_command(label = "Save", command= self.__openFile)
+
+        
