@@ -185,3 +185,5 @@ class editorNotepad:
             file.write(self.__ofTextArea.get(1.0, END))
             file.close()
 
+    def __cut(self):
+        self.__ofTextArea.event_generate("<<Cut>>")  #cut function built
