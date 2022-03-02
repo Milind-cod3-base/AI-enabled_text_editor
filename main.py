@@ -113,3 +113,15 @@ class editorNotepad:
         self.__ofMenuBar.add_cascade(label="Edit",command= self.__ofEditMenu)
 
         #CASCADE creates a new hierarchical menu by associating a given menu to a parent menu
+
+        #to create a feature of description of the Notepad/editor
+        self.__ofHelpMenu.add_command(label="About Editor", command=self.__showAbout)
+
+        self.__ofMenuBar.add_cascade(label="Help", menu=self.__ofHelpMenu)
+
+        self.__root.config(menu=self.__ofMenuBar)
+
+        self.__ofScrollBar.pack(side=RIGHT,fill=Y)
+        #fill packs a widget inside a container, filling the entire container. 
+
+        
