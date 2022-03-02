@@ -131,4 +131,7 @@ class editorNotepad:
     def __quitApplication(self):
 
         self.__root.destroy()  #this will exit the application
+
+    def __showAbout(self):
+        showinfo("Editor", "Milind")
         
