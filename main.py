@@ -152,4 +152,10 @@ class editorNotepad:
             self.__ofTextArea.insert(1.0,file.read())
 
             file.close()
-            
+
+    def __newFile(self):
+        self.__root.title("Untitled - Editor")
+        self.__file= None
+        self.__ofTextArea.delete(1.0, END) #deletes the characters between index 1 and index 2 (not including them)
+
+        
