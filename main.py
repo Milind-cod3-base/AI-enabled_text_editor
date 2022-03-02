@@ -158,4 +158,30 @@ class editorNotepad:
         self.__file= None
         self.__ofTextArea.delete(1.0, END) #deletes the characters between index 1 and index 2 (not including them)
 
-        
+    
+    def __saveFile(self):
+
+        if self.__file == None:    #saving a newly built file
+
+            self.__file = asksaveasfilename(initialfile = "Untitled.txt", defaultextension=".txt", filetypes=[("All files", "*.*"),('Text Documents', '*.txt')])
+            #unamed file will be untitled and default extension would be txt
+
+            if self.__file=="":
+                self.__file= None
+
+            else:
+                #try to save the file
+
+                file = open(self.__file,"w")
+                file.write(self.__ofTextArea.get(1.0,END))
+                file.close()
+
+                #changing the window title
+                self.__root.title(os.path.basename(self.__file)+ " - Editor")
+
+        else:
+                #saving pre existing file
+            file = open(self.__file,"w")
+            file.write(self.__ofTextArea.get(1.0, END))
+            file.close()
+
