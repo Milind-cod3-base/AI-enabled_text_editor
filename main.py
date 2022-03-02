@@ -63,7 +63,7 @@ class editorNotepad:
 
         #Center the window
         screenWidth = self.__root.winfo_screenwidth()
-        screenHeight = self._root.winfo_screenheight()
+        screenHeight = self.__root.winfo_screenheight()  #bug fixed
 
 
         #left aligning the window
@@ -91,7 +91,7 @@ class editorNotepad:
         self.__ofFileMenu.add_command(label = "Open", command= self.__openFile)
 
         #saving a file
-        self.__ofFileMenu.add_command(lable="Save", command = self.__saveFile)
+        self.__ofFileMenu.add_command(label="Save", command = self.__saveFile)  #bug fixed
 
         #creating a new line in the dialoge
 
@@ -199,3 +199,10 @@ class editorNotepad:
     def run(self): #function to run the application
 
         self.__root.mainloop()
+
+
+
+#Driver's code
+
+editor = editorNotepad(width=600, height=400)  
+editor.run()
