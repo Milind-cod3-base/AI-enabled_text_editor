@@ -109,4 +109,7 @@ class editorNotepad:
         #paste feature
         self.__ofEditMenu.add_command(label="Paste", command=self.__paste)
 
-        #
+        #To give a feature of editing
+        self.__ofMenuBar.add_cascade(label="Edit",command= self.__ofEditMenu)
+
+        #CASCADE creates a new hierarchical menu by associating a given menu to a parent menu
