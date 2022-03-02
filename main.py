@@ -93,4 +93,8 @@ class editorNotepad:
         #saving a file
         self.__ofFileMenu.add_command(lable="Save", command = self.__saveFile)
 
-        
+        #creating a new line in the dialoge
+
+        self.__ofFileMenu.add_separator()
+        self.__ofFileMenu.add_command(label= "Exit", command= self.__quitApplication)
+        self.__ofMenuBar.add_cascade(label="File", menu = self.__ofFileMenu) #add heirarichal menu item
