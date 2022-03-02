@@ -181,7 +181,7 @@ class editorNotepad:
 
         else:
                 #saving pre existing file
-            file = open(self.__file,"w")
+            file = open(self.__file,"w")     #'w' flags help to write into the file after opening it
             file.write(self.__ofTextArea.get(1.0, END))
             file.close()
 
