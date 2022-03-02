@@ -102,3 +102,11 @@ class editorNotepad:
 
         #Cutting a text feature
         self.__ofEditMenu.add_command(label = "Cut", command = self.__cut)
+
+        #copy a text feature
+        self.__ofEditMenu.add_command(label="Copy", command =self.__copy)
+
+        #paste feature
+        self.__ofEditMenu.add_command(label="Paste", command=self.__paste)
+
+        #
