@@ -194,3 +194,8 @@ class editorNotepad:
     
     def __paste(self):
         self.__ofTextArea.event_generate("<<Paste>>")
+
+    
+    def run(self): #function to run the application
+
+        self.__root.mainloop()
