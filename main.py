@@ -98,3 +98,7 @@ class editorNotepad:
         self.__ofFileMenu.add_separator()
         self.__ofFileMenu.add_command(label= "Exit", command= self.__quitApplication)
         self.__ofMenuBar.add_cascade(label="File", menu = self.__ofFileMenu) #add heirarichal menu item
+
+
+        #Cutting a text feature
+        self.__ofEditMenu.add_command(label = "Cut", command = self.__cut)
