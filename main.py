@@ -187,3 +187,8 @@ class editorNotepad:
 
     def __cut(self):
         self.__ofTextArea.event_generate("<<Cut>>")  #cut function built
+
+    def __copy(self):
+        self.__ofTextArea.event_generate("<<Copy>>")  #copy function ready to be called
+
+        
