@@ -124,4 +124,8 @@ class editorNotepad:
         self.__ofScrollBar.pack(side=RIGHT,fill=Y)
         #fill packs a widget inside a container, filling the entire container. 
 
+        # Scrollbar will adjust automatically according to the content
+        self.__ofScrollBar.config(command=self.__ofTextArea.yview)
+        self.__ofTextArea.config(yscrollcommand=self.__ofScrollBar.set)
+
         
