@@ -128,4 +128,7 @@ class editorNotepad:
         self.__ofScrollBar.config(command=self.__ofTextArea.yview)
         self.__ofTextArea.config(yscrollcommand=self.__ofScrollBar.set)
 
+    def __quitApplication(self):
+
+        self.__root.destroy()  #this will exit the application
         
