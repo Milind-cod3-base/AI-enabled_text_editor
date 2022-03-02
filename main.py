@@ -191,4 +191,6 @@ class editorNotepad:
     def __copy(self):
         self.__ofTextArea.event_generate("<<Copy>>")  #copy function ready to be called
 
-        
+    
+    def __paste(self):
+        self.__ofTextArea.event_generate("<<Paste>>")
