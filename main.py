@@ -134,4 +134,22 @@ class editorNotepad:
 
     def __showAbout(self):
         showinfo("Editor", "Milind")
-        
+
+    def __openFile(self):
+
+        self.__file = askopenfilename(defaultextension=".txt",filetypes=[("All files", "*.*"),("Text Documents", "*.txt")])
+
+        if self.__file =="":
+            self.__file= None  #there is no file to open
+
+        else:
+                #try to open the file and set the window title / name
+            self.__root.title(os.path.basename(self.__file) + " - Editor")
+            self.__ofTextArea.delete(1.0,END)
+
+            file = open(self.__file,"r")
+
+            self.__ofTextArea.insert(1.0,file.read())
+
+            file.close()
+            
