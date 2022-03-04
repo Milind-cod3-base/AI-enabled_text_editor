@@ -30,7 +30,7 @@ class editorNotepad:
 
     #A scrollbar to scroll up and down in the window
     __ofScrollBar = Scrollbar(__ofTextArea)   #setting up a scrollbar in the entire text area
-    
+    __file =   None
 
     def __init__(self, **kwargs):  
         
@@ -163,7 +163,7 @@ class editorNotepad:
 
         if self.__file == None:    #saving a newly built file
 
-            self.__file = asksaveasfilename(initialfile = "Untitled.txt", defaultextension=".txt", filetypes=[("All files", "*.*"),('Text Documents', '*.txt')])
+            self.__file = asksaveasfilename(initialfile = "Untitled.txt", defaultextension=".txt", filetypes=[("All files", "*.*"),("Text Documents", "*.txt")])
             #unamed file will be untitled and default extension would be txt
 
             if self.__file=="":
@@ -177,7 +177,7 @@ class editorNotepad:
                 file.close()
 
                 #changing the window title
-                self.__root.title(os.path.basename(self.__file)+ " - Editor")
+                self.__root.title(os.path.basename(self.__file) + " - Editor")
 
         else:
                 #saving pre existing file
