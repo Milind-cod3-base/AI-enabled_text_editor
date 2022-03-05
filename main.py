@@ -130,6 +130,8 @@ class editorNotepad:
         self.__ofTextArea.config(yscrollcommand=self.__ofScrollBar.set)
 
         #adding OpenAI upi call slot in the interface - in the menubar
+
+        self.__ofAiMenu.add_command(label= 'Run', command= self.__callOpenAI)    #running command created and buit inside the better call bot option
         self.__ofMenuBar.add_cascade(label="BetterCallBot", menu = self.__ofAiMenu)  #bug fixed and since better call bot was looking like three different options on panel, I removed the space between them
         #breaking bad reference
 
