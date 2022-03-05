@@ -129,6 +129,9 @@ class editorNotepad:
         self.__ofScrollBar.config(command=self.__ofTextArea.yview)
         self.__ofTextArea.config(yscrollcommand=self.__ofScrollBar.set)
 
+        #adding OpenAI upi call slot in the interface - in the menubar
+        self.__ofMenuBar.add_cascade(label="Better Call Bot", Menu = self.__ofAiMenu)  #breaking bad reference
+
     def __quitApplication(self):
 
         self.__root.destroy()  #this will exit the application
