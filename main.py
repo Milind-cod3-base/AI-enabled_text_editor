@@ -3,6 +3,8 @@
 
 # Functions / Menus like 'file, edit, saving, opening, cut/paste etc' will be available in the GUI.
 
+from urllib import response
+import openai
 import os
 import tkinter   #python's GUI package installed
 from tkinter import *
@@ -201,6 +203,12 @@ class editorNotepad:
     
     def __paste(self):
         self.__ofTextArea.event_generate("<<Paste>>")
+
+    def __callOpenAI(self):   #function to call the openai upi whenever user presses Run command in BetterCallBot menu.
+
+        #to take the input from the texteditor
+
+        prompt = self.__ofTextArea.get(1.0, END)    
 
     
     def run(self): #function to run the application
