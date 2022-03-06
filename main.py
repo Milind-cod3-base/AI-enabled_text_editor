@@ -211,12 +211,18 @@ class editorNotepad:
 
         prompt = self.__ofTextArea.get(1.0, END)    
 
-        openai.api_key = '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' #API key, which is one can get by singing in on openai website
+        openai.api_key = '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' #API key, which is one can get by singing in on openai website
         
         #Completion response in Json format and storing it in an object. Engine is chosen along with max tokens possible(responsible for lengthy response). By keeping echo parameter as true, both prompt and completion is concatenated
         
-        response = openai.Completion.create(engine="text-davinci-001", prompt=prompt,max_tokens = 50, echo = True)   
+        response = openai.Completion.create(engine="text-davinci-001", prompt=prompt,max_tokens = 100, echo = True)
+
+        self.__ofTextArea.delete(1.0, END)    #clears the window for api response.
+
+        self.__ofTextArea.insert(1.0, response["choices"][0]["text"])     #parsing the Json response and extracting only the required string
     
+
+
     
     def run(self): #function to run the application
 
