@@ -204,14 +204,19 @@ class editorNotepad:
     def __paste(self):
         self.__ofTextArea.event_generate("<<Paste>>")
 
-    def __callOpenAI(self):   #function to call the openai upi whenever user presses Run command in BetterCallBot menu.
+    def __callOpenAI(self): 
+          #function to call the openai upi whenever user presses Run command in BetterCallBot menu.
 
         #to take the input from the texteditor
 
         prompt = self.__ofTextArea.get(1.0, END)    
 
-         openai.api_key = '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' #API key, which is one can get by singing in on openai website
-
+        openai.api_key = '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' #API key, which is one can get by singing in on openai website
+        
+        #Completion response in Json format and storing it in an object. Engine is chosen along with max tokens possible(responsible for lengthy response). By keeping echo parameter as true, both prompt and completion is concatenated
+        
+        response = openai.Completion.create(engine="text-davinci-001", prompt=prompt,max_tokens = 50, echo = True)   
+    
     
     def run(self): #function to run the application
 
