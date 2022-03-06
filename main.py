@@ -210,11 +210,14 @@ class editorNotepad:
 
         prompt = self.__ofTextArea.get(1.0, END)    
 
+         openai.api_key = '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' #API key, which is one can get by singing in on openai website
+
     
     def run(self): #function to run the application
 
         self.__root.mainloop()
 
+        
 
 
 #Driver's code
