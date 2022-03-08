@@ -1,16 +1,16 @@
 # What:
 
-Using Python, I have build a text editor / notepad where one can type, copy, cut, paste etc.
+Using OpenAI's API and Tkinter library of Python, this text editor is built and is able to predict and autocomplete code, poem, essays, songs or even answering basic questions.
+
 
 # How:
 
-Tkinter is the python's GUI library which makes this project possible.
+Just write a one line summary/pitch of what you want (more detailed summary will get more precise results) and press the Run command under BetterCallBot Menu.
 
-# Upcoming upgrades:
+for ex. "Suggest a name of baby boy" will give less precise results than "Suggest a name of Indian baby boy".
 
-After building a text editor:
 
-=> Install a spelling and grammar check module
+# Trivia:
 
-=> I wish to gain knowledge in Natural Language Processing (Machine learning subset) and implement in this text editor. By that, it will help the writer/author by predicting and recommeding him/her next words.
+BetterCallBot is a reference to Breaking bad's spin off "Better Call Saul" where a lawyer is called for help.
 
