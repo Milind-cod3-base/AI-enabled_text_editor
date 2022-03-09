@@ -3,6 +3,7 @@
 
 # Functions / Menus like 'file, edit, saving, opening, cut/paste etc' will be available in the GUI.
 
+import configparser
 from urllib import response
 import openai
 import os
@@ -12,6 +13,9 @@ from tkinter import *
 from tkinter.messagebox import *    #its to write text / message in the notepad
 
 from tkinter.filedialog import *   #used for the dialog box to appear when you are opening file from anywhere in your system / saving your file in a particular position of place
+
+from configparser import ConfigParser    #configparser libraries imported
+
 
 #creating a class
 
@@ -211,7 +215,11 @@ class editorNotepad:
 
         prompt = self.__ofTextArea.get(1.0, END)    
 
-        openai.api_key = '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' #API key, which is one can get by singing in on openai website
+        con = configparser.ConfigParser()    #storing the config parser in an object 
+
+        con.read('config.ini')    #reading config.ini file where the api key is stored
+
+        openai.api_key = con['instance']['API_KEY']
         
         #Completion response in Json format and storing it in an object. Engine is chosen along with max tokens possible(responsible for lengthy response). By keeping echo parameter as true, both prompt and completion is concatenated
         
