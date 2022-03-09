@@ -9,6 +9,7 @@ Just write a one line summary/pitch of what you want (more detailed summary will
 
 for ex. "Suggest a name of baby boy" will give less precise results than "Suggest a name of Indian baby boy".
 
+NOTE: Since OpenAI won't let their api keys be public, I have hidden in config.ini and ignored it via gitignore file. To get the keys, either login to OpenAI website and get new keys or kindly message me.
 
 # Trivia:
 
