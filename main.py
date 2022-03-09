@@ -223,7 +223,7 @@ class editorNotepad:
         
         #Completion response in Json format and storing it in an object. Engine is chosen along with max tokens possible(responsible for lengthy response). By keeping echo parameter as true, both prompt and completion is concatenated
         
-        response = openai.Completion.create(engine="text-davinci-001", prompt=prompt,max_tokens = 100, echo = True)
+        response = openai.Completion.create(engine="text-davinci-001", prompt=prompt,max_tokens = 2000, echo = True)
 
         self.__ofTextArea.delete(1.0, END)    #clears the window for api response.
 
